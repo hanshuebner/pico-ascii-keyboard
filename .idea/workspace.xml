@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="BackendCodeEditorMiscSettings">
+    <option name="/Default/RiderDebugger/RiderRestoreDecompile/RestoreDecompileSetting/@EntryValue" value="false" type="bool" />
+    <option name="/Default/Housekeeping/GlobalSettingsUpgraded/IsUpgraded/@EntryValue" value="true" type="bool" />
+    <option name="/Default/Housekeeping/FeatureSuggestion/FeatureSuggestionManager/DisabledSuggesters/=SwitchToGoToActionSuggester/@EntryIndexedValue" value="true" type="bool" />
+    <option name="/Default/Housekeeping/FeatureSuggestion/FeatureSuggestionManager/DisabledSuggesters/=SwitchToGoToActionSuggester/@EntryIndexRemoved" />
+    <option name="/Default/Environment/Hierarchy/GeneratedFilesCacheKey/Timestamp/@EntryValue" value="5" type="long" />
+    <option name="/Default/Housekeeping/OptionsDialog/SelectedPageId/@EntryValue" value="CppFormatterOtherPage" type="string" />
+  </component>
+  <component name="CMakePresetLoader">{
+  &quot;useNewFormat&quot;: true
+}</component>
+  <component name="CMakeProjectFlavorService">
+    <option name="flavorId" value="CMakePlainProjectFlavor" />
+  </component>
+  <component name="CMakeReloadState">
+    <option name="reloaded" value="true" />
+  </component>
+  <component name="CMakeRunConfigurationManager">
+    <generated>
+      <config projectName="pico-ascii-keyboard" targetName="bs2_default_library" />
+      <config projectName="pico-ascii-keyboard" targetName="bs2_default" />
+      <config projectName="pico-ascii-keyboard" targetName="pico-ascii-keyboard" />
+      <config projectName="pico-ascii-keyboard" targetName="pioasmBuild" />
+      <config projectName="pico-ascii-keyboard" targetName="cyw43_driver_picow_cyw43_bus_pio_spi_pio_h" />
+      <config projectName="pico-ascii-keyboard" targetName="bs2_default_bin" />
+    </generated>
+  </component>
+  <component name="CMakeSettings" AUTO_RELOAD="true">
+    <configurations>
+      <configuration PROFILE_NAME="Debug" ENABLED="true" CONFIG_NAME="Debug" GENERATION_OPTIONS="-DPICO_PLATFORM=rp2040 -DPICO_BOARD=pico">
+        <ADDITIONAL_GENERATION_ENVIRONMENT>
+          <envs>
+            <env name="PICO_SDK_PATH" value="$PROJECT_DIR$/../pico-sdk" />
+          </envs>
+        </ADDITIONAL_GENERATION_ENVIRONMENT>
+      </configuration>
+    </configurations>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="df6fc40b-41ee-4dc1-a78b-c87603e432f0" name="Changes" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ClangdSettings">
+    <option name="formatViaClangd" value="false" />
+  </component>
+  <component name="EmbeddedSvdWindowState">
+    <option name="columnWidths">
+      <list>
+        <option value="212" />
+        <option value="92" />
+        <option value="976" />
+      </list>
+    </option>
+    <option name="columnOrder">
+      <list>
+        <option value="Name" />
+        <option value="Value" />
+        <option value="Description" />
+      </list>
+    </option>
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../pico-sdk/lib/tinyusb" />
+    <option name="ROOT_SYNC" value="DONT_SYNC" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/pico-ascii-keyboard.c" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+  </component>
+  <component name="MacroExpansionManager">
+    <option name="directoryName" value="298yez6q" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 7
+}</component>
+  <component name="ProjectId" id="2rYl70uLLiPTcjzD1W8z7cr9fYp" />
+  <component name="ProjectViewState">
+    <option name="autoscrollFromSource" value="true" />
+    <option name="autoscrollToSource" value="true" />
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "CMake Application.pico-ascii-keyboard.executor": "Debug",
+    "OpenOCD Download & Run.Pico Debug 2651.executor": "Debug",
+    "OpenOCD Download & Run.Pico Debug test.executor": "Debug",
+    "OpenOCD Download & Run.Pico Debug.executor": "Debug",
+    "RunOnceActivity.RadMigrateCodeStyle": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.cidr.known.project.marker": "true",
+    "RunOnceActivity.readMode.enableVisualFormatting": "true",
+    "RunOnceActivity.west.config.association.type.startup.service": "true",
+    "cf.advertisement.text.has.clang-format": "true",
+    "cf.first.check.clang-format": "false",
+    "cidr.known.project.marker": "true",
+    "git-widget-placeholder": "0.17.0",
+    "go.import.settings.migrated": "true",
+    "last_opened_file_path": "/Users/hans/Development/privat/pico-ascii-keyboard",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "org.rust.cargo.project.model.impl.CargoExternalSystemProjectAware.subscribe.first.balloon": "",
+    "settings.editor.selected.configurable": "preferences.keymap",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RunManager" selected="OpenOCD Download &amp; Run.Pico Debug">
+    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="bs2_default" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="pico-ascii-keyboard" TARGET_NAME="bs2_default" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="pico-ascii-keyboard" RUN_TARGET_NAME="bs2_default">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="bs2_default_bin" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="pico-ascii-keyboard" TARGET_NAME="bs2_default_bin" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="bs2_default_library" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="pico-ascii-keyboard" TARGET_NAME="bs2_default_library" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="cyw43_driver_picow_cyw43_bus_pio_spi_pio_h" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="pico-ascii-keyboard" TARGET_NAME="cyw43_driver_picow_cyw43_bus_pio_spi_pio_h" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="pioasmBuild" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="pico-ascii-keyboard" TARGET_NAME="pioasmBuild" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Pico Debug" type="com.jetbrains.cidr.embedded.openocd.conf.type" factoryName="com.jetbrains.cidr.embedded.openocd.conf.factory" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="pico-ascii-keyboard" TARGET_NAME="pico-ascii-keyboard" CONFIG_NAME="Debug" version="1" RUN_TARGET_PROJECT_NAME="pico-ascii-keyboard" RUN_TARGET_NAME="pico-ascii-keyboard">
+      <openocd version="1" gdb-port="3333" telnet-port="4444" board-config="$PROJECT_DIR$/openocd.cfg" reset-type="INIT" download-type="UPDATED_ONLY">
+        <debugger kind="GDB" isBundled="true" />
+      </openocd>
+      <method v="2">
+        <option name="CLION.COMPOUND.BUILD" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="CMake Application.bs2_default" />
+      <item itemvalue="CMake Application.bs2_default_bin" />
+      <item itemvalue="CMake Application.bs2_default_library" />
+      <item itemvalue="CMake Application.cyw43_driver_picow_cyw43_bus_pio_spi_pio_h" />
+      <item itemvalue="CMake Application.pioasmBuild" />
+      <item itemvalue="OpenOCD Download &amp; Run.Pico Debug" />
+    </list>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="df6fc40b-41ee-4dc1-a78b-c87603e432f0" name="Changes" comment="" />
+      <created>1736743717400</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1736743717400</updated>
+      <workItem from="1736743718474" duration="3000" />
+      <workItem from="1736743734617" duration="119000" />
+      <workItem from="1736743859919" duration="8422000" />
+      <workItem from="1736829006350" duration="66000" />
+      <workItem from="1736829107036" duration="275000" />
+      <workItem from="1736829391178" duration="834000" />
+      <workItem from="1736830232152" duration="85000" />
+      <workItem from="1736830839871" duration="3734000" />
+      <workItem from="1736971540964" duration="988000" />
+      <workItem from="1736972538613" duration="13782000" />
+      <workItem from="1737138547285" duration="3215000" />
+      <workItem from="1737179933454" duration="7793000" />
+      <workItem from="1737350962329" duration="28174000" />
+      <workItem from="1737662172904" duration="197000" />
+      <workItem from="1737663918980" duration="4562000" />
+      <workItem from="1737699605012" duration="919000" />
+      <workItem from="1737781185099" duration="5551000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VCPKGProject">
+    <isAutomaticCheckingOnLaunch value="false" />
+    <isAutomaticFoundErrors value="true" />
+    <isAutomaticReloadCMake value="true" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/pico-ascii-keyboard.c</url>
+          <line>39</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>
