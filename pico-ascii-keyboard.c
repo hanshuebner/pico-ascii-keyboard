@@ -13,6 +13,11 @@
 #define GPIO_STB_MASK (1 << (GPIO_FIRST_BIT + 8))
 #define GPIO_AKD_MASK (1 << (GPIO_FIRST_BIT + 9))
 
+#define REPEAT_DELAY 700000
+#define REPEAT_INTERVAL 50000
+absolute_time_t repeat_key_at = 0;
+uint8_t repeat_char = 0;
+
 // Helper to check if a keycode is in the report
 bool key_in_report(uint8_t keycode, hid_keyboard_report_t const *report) {
     for (uint8_t i = 0; i < 6; i++) {
@@ -23,21 +28,34 @@ bool key_in_report(uint8_t keycode, hid_keyboard_report_t const *report) {
     return false;
 }
 
+void
+send_key(uint8_t c) {
+    uint32_t output = (c << GPIO_FIRST_BIT) | GPIO_AKD_MASK;
+    gpio_put_all(output);
+    sleep_us(7);
+    output |= GPIO_STB_MASK;
+    gpio_put_all(output);
+    sleep_us(5);
+    output &= ~GPIO_STB_MASK;
+    sleep_ms(1);
+}
+
 // Callback for HID keyboard reports
 void process_kbd_report(hid_keyboard_report_t const *report) {
     static hid_keyboard_report_t prev_report = { 0 }; // To detect key changes
-    static uint8_t pressed = 0;
+    static uint8_t pressed_count = 0;
 
     // Process key release
     for (uint8_t i = 0; i < 6; i++) {
         if (prev_report.keycode[i] && !key_in_report(prev_report.keycode[i], report)) {
-            printf("Key released: 0x%02X\n", prev_report.keycode[i]);
+            printf("Key 0x%02x released\n", prev_report.keycode[i]);
             const KeyEvent event = convert_hid_to_ascii(prev_report.keycode[i], report->modifier);
             if (event.valid) {
-                pressed--;
-                if (pressed == 0) {
+                pressed_count--;
+                if (pressed_count == 0) {
                     printf("All keys released\n");
                     gpio_put_all(0);
+                    repeat_key_at = 0;
                 }
             }
         }
@@ -46,7 +64,6 @@ void process_kbd_report(hid_keyboard_report_t const *report) {
     // Process key press
     for (uint8_t i = 0; i < 6; i++) {
         if (report->keycode[i] && !key_in_report(report->keycode[i], &prev_report)) {
-            printf("Key pressed: 0x%02X\n", report->keycode[i]);
             const KeyEvent event = convert_hid_to_ascii(report->keycode[i], report->modifier);
             if (!event.valid) {
                 printf("Unmapped keycode: 0x%02X\n", report->keycode[i]);
@@ -55,13 +72,15 @@ void process_kbd_report(hid_keyboard_report_t const *report) {
                 if (event.modifiers & (MODIFIER_LEFT_CTRL | MODIFIER_RIGHT_CTRL)) {
                     c &= 0x1F; // Turn into control character
                 }
-                uint32_t output = (c << GPIO_FIRST_BIT) | GPIO_STB_MASK | GPIO_AKD_MASK;
-                printf("ASCII: 0x%02x (%c)\n%032b\n", c, isprint(c) ? c : '?', output);
-                gpio_put_all(output);
-                sleep_ms(2);
-                gpio_put_all(GPIO_AKD_MASK);
-                printf("%032b\n", GPIO_AKD_MASK);
-                pressed++;
+                printf("Keycode 0x%02x => ASCII: 0x%02x (%c)\n", report->keycode[i], c, isprint(c) ? c : '?');
+                send_key(c);
+                pressed_count++;
+                if (pressed_count == 1) {
+                    repeat_key_at = get_absolute_time() + REPEAT_DELAY;
+                    repeat_char = c;
+                } else {
+                    repeat_key_at = 0;
+                }
             }
         }
     }
@@ -124,5 +143,9 @@ int main(void) {
     while (1) {
         // Poll the TinyUSB host stack
         tuh_task();
+        if (repeat_key_at > 0 && get_absolute_time() > repeat_key_at) {
+            send_key(repeat_char);
+            repeat_key_at = get_absolute_time() + REPEAT_INTERVAL;
+        }
     }
 }
