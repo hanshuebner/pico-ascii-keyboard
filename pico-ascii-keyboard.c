@@ -37,6 +37,7 @@ send_key(uint8_t c) {
     gpio_put_all(output);
     sleep_us(5);
     output &= ~GPIO_STB_MASK;
+    gpio_put_all(output);
     sleep_ms(1);
 }
 
