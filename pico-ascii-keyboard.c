@@ -28,16 +28,15 @@ bool key_in_report(uint8_t keycode, hid_keyboard_report_t const *report) {
     return false;
 }
 
+uint32_t current_output = 0;
+
 void
 send_key(uint8_t c) {
-    uint32_t output = (c << GPIO_FIRST_BIT) | GPIO_AKD_MASK;
-    gpio_put_all(output);
-    sleep_us(7);
-    output |= GPIO_STB_MASK;
-    gpio_put_all(output);
-    sleep_us(5);
-    output &= ~GPIO_STB_MASK;
-    gpio_put_all(output);
+    current_output = (c << GPIO_FIRST_BIT) | GPIO_AKD_MASK | GPIO_STB_MASK;
+    gpio_put_all(current_output);
+    sleep_us(11);
+    current_output &= ~GPIO_STB_MASK;
+    gpio_put_all(current_output);
     sleep_ms(1);
 }
 
@@ -55,7 +54,8 @@ void process_kbd_report(hid_keyboard_report_t const *report) {
                 pressed_count--;
                 if (pressed_count == 0) {
                     printf("All keys released\n");
-                    gpio_put_all(0);
+                    current_output &= ~GPIO_AKD_MASK;
+                    gpio_put_all(current_output);
                     repeat_key_at = 0;
                 }
             }
@@ -126,6 +126,7 @@ void init_keyboard_port() {
     for (int i = GPIO_FIRST_BIT; i < GPIO_FIRST_BIT + BIT_COUNT; i++) {
         gpio_init(i);
         gpio_set_dir(i, GPIO_OUT);
+        gpio_pull_down(i);
     }
 }
 
