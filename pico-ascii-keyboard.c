@@ -32,7 +32,11 @@ uint32_t current_output = 0;
 
 void
 send_key(uint8_t c) {
-    current_output = (c << GPIO_FIRST_BIT) | GPIO_AKD_MASK | GPIO_STB_MASK;
+    current_output &= ~GPIO_DATA_MASK;
+    current_output |= c << GPIO_FIRST_BIT;
+    gpio_put_all(current_output);
+    sleep_us(10);
+    current_output |= GPIO_AKD_MASK | GPIO_STB_MASK;
     gpio_put_all(current_output);
     sleep_us(11);
     current_output &= ~GPIO_STB_MASK;
